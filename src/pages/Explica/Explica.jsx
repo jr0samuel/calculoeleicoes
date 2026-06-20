@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { alterarHead } from "../../utils/favicon.js";
-import { Link } from "react-router-dom";
 import styles from './Explica.module.css';
 
 export default function Explica () {
@@ -14,7 +13,6 @@ export default function Explica () {
                 <h4>
                     Como funcionam os cálculos para eleger vereadores e deputados estaduais e federais?
                 </h4>
-                <Link to="/">Home</Link>{" "}
             </section>
             <section className={styles.articulo}>
                 <div className={`${styles.parte_um}`}>
