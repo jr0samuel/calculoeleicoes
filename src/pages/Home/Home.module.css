@@ -1,0 +1,31 @@
+.principal{
+    max-width: 500px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    cursor: default;
+}
+.secao_um{
+    border: 1px solid rebeccapurple;
+    padding: 15px 0px;
+    text-align: center;
+    color: black;
+}
+.secao_dois{
+    border: 1px solid black;
+    padding: 20px 10px;
+    text-align: center;
+}
+.secao_tres{
+    border: 1px solid rebeccapurple;
+    padding: 30px 0PX;
+    text-align: center;
+}
+ .secao_tres_link{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+ }
+.secao_tres_link:hover, .secao_tres_link:focus{
+    color: burlywood;
+    outline: none;
+}

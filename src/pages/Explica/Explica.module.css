@@ -1,0 +1,39 @@
+.artigo{
+    max-width: 600px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.titulo{
+    border: 1px solid rebeccapurple;
+    padding: 15px 0px;
+}
+.titulo h4{
+    max-width: 500px;
+    margin: 0 auto;
+    text-decoration: underline dotted;
+    text-align: center;
+}
+.articulo{
+    text-align: justify;
+}
+.parte_um{
+    border: 1px solid black;
+    padding: 15px 15px;
+}
+.parte_dois{
+    border: 1px solid rebeccapurple;
+    padding: 15px 15px;
+}
+.links, .linkss{
+    color: rgb(100, 1, 100);
+    font-style: italic;
+    text-decoration: underline;
+    word-break: break-all;
+}
+.linkss{
+    word-break: break-word;
+}
+.spann{
+    margin: -15px 0px;
+}

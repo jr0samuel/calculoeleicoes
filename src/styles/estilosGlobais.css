@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(100, 100, 100);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    &::selection{
+        color: burlywood;
+        background-color: darkslateblue;
+    }
+}
+.placeholder-texto, .btn{
+    width: 220px;
+    padding: 5px;
+    margin: 0px 5px 5px 5px;
+    background-color: darkslategray;
+    color: burlywood;
+}
+.btn{
+    margin-top: -5px;
+    width: initial;
+    cursor: pointer;
+}
+.placeholder-texto::placeholder{
+    color: burlywood;
+}
+.result{
+    border: 5px solid darkslategray;
+    color: black;
+    padding: 5px 10px;
+    cursor: auto;
+    font-weight: bold;
+}
+.clicado{
+    transform: scale(0.9);
+}
