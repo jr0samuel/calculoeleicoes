@@ -23,13 +23,13 @@ export default function Explica () {
                         Imagem com exemplo prático e real dos cálculos
                     </a>
                     <br/><br/>
-                    Primeiro, calcule o quociente eleitoral (QE). É a divisão entre os votos válidos da eleição e a quantidade de vagas. Com o resultado dessa divisão, faça o arredondamento com o primeiro número depois da vírgula, se for 5 ou menos, arredonda para baixo, se for 6 ou mais, arredonda para cima. E já faça 10%, 80% e 20% do resultado do QE, pois esses valores serão usados posteriormente.
+                    Primeiro, calcule o quociente eleitoral (QE). É a divisão entre os votos válidos da eleição e a quantidade de vagas do parlamento, seja a câmara de vereadores ou a assembleia legislativa estadual ou a câmara federal. Com o resultado dessa divisão, faça o arredondamento com o primeiro número depois da vírgula, se for 5 ou menos, arredonda para baixo, se for 6 ou mais, arredonda para cima. E já faça 10%, 80% e 20% do resultado do QE, pois esses valores serão usados posteriormente.
                     <br/><br/>
-                    Em seguida, o quociente partidário (QP). É a divisão entre os votos válidos do partido e o QE. Sempre arredonda para baixo. Faça isso com todos os partidos. O resultado é a quantidade de candidatos de cada partido que serão eleitos nesse momento da seguinte forma: se o QP de tal partido for 2, por exemplo, veja os dois candidatos mais votados desse partido, se um deles recebeu votos igual ou mais que 10% do QE e o outro menos, aquele que teve 10% ou mais será eleito e a vaga do outro é perdida e vai para a Sobra.
+                    Em seguida, o quociente partidário (QP). É a divisão entre os votos válidos do partido e o QE. Sempre arredonda para baixo. Faça isso com todos os partidos. O resultado é a quantidade de candidatos que o partido poderá eleger nesse momento, mas os candidatos precisam ter recebido votos pelo menos igual a 10% do QE, ou seja, se o QP do partido é 2, por exemplo, veja os dois candidatos mais votados desse partido, se um deles recebeu votos igual ou mais que 10% do QE e o outro menos, aquele que teve 10% ou mais será eleito e a vaga do outro é perdida e vai para a Sobra.
                     <br/><br/>
                     Se nenhum partido tiver QP pelo menos 1, os candidatos serão eleitos de acordo com o número de votos recebidos individualmente, assim como prefeito, governador, presidente e senador.
                     <br/><br/>
-                    O que são os "puxadores de votos"? São candidatos que recebem muitos votos, isso favorece o partido a ter QP alto e eleger mais de um na primeira fase, que é essa fase do QP e dos 10% do QE. Portanto, o "puxador" não puxa ninguém de forma direta. Outra coisa, não há "puxada" nas Sobra, que é a próxima fase, porém, como o partido teve muitos votos, isso geralmente favorece, pelo menos no primeiro cálculo da Sobra.
+                    O que são os "puxadores de votos"? São candidatos que recebem muitos votos, isso favorece o partido a ter QP alto e eleger mais de um na primeira fase, que é essa fase do QP e dos 10% do QE. Portanto, o "puxador" não puxa ninguém de forma direta. Outra coisa, não há "puxada" nas Sobra, que é a próxima fase, porém, como o partido teve muitos votos, isso geralmente favorece, pelo menos no primeiro cálculo da Sobra para eleger um, depois fica difícil por causa do cálculo para quem elegeu.
                     <br/><br/>
                     O processo da Sobra é feito em rodadas. Para participar da Sobra, o partido precisa ter recebido votos igual ou mais que 80% do QE, mesmo se teve QP 0.
                     <br/><br/>
@@ -38,7 +38,8 @@ export default function Explica () {
                     A segunda rodada é assim: faça o cálculo anterior para todos os partidos que não elegeram nenhum candidato na Sobra e faça o seguinte cálculo para os partidos que elegeram alguém na Sobra: votos válidos do partido dividido pelo QP do partido + 1 + quantidade de vagas ganhas na Sobra, ou seja, se o partido elegeu dois na Sobra, coloque 2, e assim sucessivamente.
                 </div>
                 <div className={`${styles.parte_dois}`}>
-                    <br/>
+                    <span>Adendos:</span>
+                    <br/><br/>
                     <div className={styles.spann}>Veja especialmente o Capítulo IV a partir do Art. 105 do Código Eleitoral.</div>
                     <br/>
                     <a className={styles.linkss} target="_blank"

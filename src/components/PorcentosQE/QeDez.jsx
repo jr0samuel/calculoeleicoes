@@ -14,7 +14,7 @@ export function QeDez() {
     return(
         <>
             <div className="container">
-                <h3>Se o partido/coligação teve QP 0, não vai eleger agora. Se teve QP 2, por exemplo, você tem que conferir se os dois candidatos mais votados receberam votos pelo menos igual a 10% do QE, se um deles não recebeu, tal vaga fica para a Sobra, e assim sucessivamente</h3>
+                <h3>Se o partido/coligação teve QP 0, não vai eleger agora. Se teve QP 2, por exemplo, veja se os dois candidatos mais votados receberam votos pelo menos igual a 10% do QE, se um deles não recebeu, tal vaga fica para a Sobra, e assim sucessivamente</h3>
                 <br/>
                 <input id="dez-qe"
                 className="placeholder-texto"
