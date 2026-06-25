@@ -15,7 +15,7 @@ export function SobraInicial() {
     return(
         <>
             <div className="container">
-                <h3>Na primeira rodada, esse cálculo vale para todos os partidos/coligações que tiveram pelo menos 80% do QE, depois vale só para os que não conseguiram vagas durante as rodadas, e os que conseguiram, fazem o próximo cálculo de acordo com o número de vagas que conseguiram</h3>
+                <h3>Na primeira rodada, esse cálculo vale para todos os partidos/coligações que receberam votos pelo menos 80% do QE, depois vale só para os que não conseguiram vagas durante as rodadas, e os que conseguiram, fazem o próximo cálculo</h3>
                 <br/>
                 <input id="sivvpc"
                 className="placeholder-texto"
