@@ -16,7 +16,7 @@ body{
     }
 }
 .placeholder-texto, .btn{
-    width: 220px;
+    width: 225px;
     padding: 5px;
     margin: 0px 5px 5px 5px;
     background-color: darkslategray;
@@ -24,7 +24,7 @@ body{
 }
 .btn{
     margin-top: -5px;
-    width: initial;
+    width: 70px;
     cursor: pointer;
 }
 .placeholder-texto::placeholder{
