@@ -14,7 +14,7 @@ export function QeVinte() {
     return(
         <>
             <div className="container">
-                <h3>Confira qual partido/coligação venceu a rodada e veja se algum candidato recebeu votos pelo menos igual a 20% do QE, se nenhum recebeu, veja se o partido/coligação que ficou em segundo na rodada tem candidato com 20% do QE, e assim sucessivamente</h3>
+                <h3>Confira qual partido/federação venceu a rodada e veja se tem algum candidato que recebeu votos pelo menos igual a 20% do QE, se nenhum recebeu, veja se o partido/federação que ficou em segundo na rodada tem candidato com 20% do QE, e assim sucessivamente, mas se ninguém tiver 20%, elege um candidato do partido/federação que ganhou a rodada</h3>
                 <br/>
                 <input id="vinte-qe"
                 className="placeholder-texto"

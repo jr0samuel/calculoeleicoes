@@ -15,11 +15,11 @@ export function Qp() {
     return(
         <>
             <div className="container">
-                <h3>Agora calcule o Quociente Partidário (QP) de cada partido/coligação</h3>
+                <h3>Agora calcule o Quociente Partidário (QP) de cada partido/federação</h3>
                 <br/>
                 <input id="vv-pc"
                 className="placeholder-texto"
-                placeholder="Votos válidos do partido/coligação"
+                placeholder="Votos válidos do partido/federação"
                 value={vvpc}
                 onChange={e => setVvpc(e.target.value)}
                 name="vvpc"

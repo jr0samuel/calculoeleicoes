@@ -5,7 +5,7 @@
     font-weight: bold;
 }
 .titulo{
-    border: 1px solid rebeccapurple;
+    border: 1px solid black;
     padding: 15px 0px;
 }
 .titulo h4{
@@ -18,11 +18,11 @@
     text-align: justify;
 }
 .parte_um{
-    border: 1px solid black;
-    padding: 15px 15px;
+    border: 1px solid rebeccapurple;
+    padding: 20px 15px;
 }
 .parte_dois{
-    border: 1px solid rebeccapurple;
+    border: 1px solid black;
     padding: 15px 15px;
 }
 .links, .linkss{
@@ -39,4 +39,8 @@
 }
 .parte_dois span{
     text-decoration: underline dotted;
+}
+img{
+    max-width: 535px;
+    height: auto;
 }
