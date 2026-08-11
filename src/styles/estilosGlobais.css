@@ -21,6 +21,11 @@ body{
     margin: 0px 5px 5px 5px;
     background-color: darkslategray;
     color: burlywood;
+    outline: none;
+    border: 2px solid burlywood;
+    &:focus{
+        border: 2px solid darkslateblue;
+    }
 }
 .btn{
     margin-top: -5px;
@@ -29,6 +34,9 @@ body{
 }
 .placeholder-texto::placeholder{
     color: burlywood;
+}
+.percent{
+    margin-top: 2px;
 }
 .result{
     border: 5px solid darkslategray;
@@ -39,4 +47,8 @@ body{
 }
 .clicado{
     transform: scale(0.9);
+    border: 2px solid darkslateblue;
+}
+.sem-click{
+    border: 2px solid burlywood;
 }

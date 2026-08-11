@@ -17,13 +17,13 @@ export function QeVinte() {
                 <h3>Confira qual partido/federação venceu a rodada e veja se tem algum candidato que recebeu votos pelo menos igual a 20% do QE, se nenhum recebeu, veja se o partido/federação que ficou em segundo na rodada tem candidato com 20% do QE, e assim sucessivamente, mas se ninguém tiver 20%, elege um candidato do partido/federação que ganhou a rodada</h3>
                 <br/>
                 <input id="vinte-qe"
-                className="placeholder-texto"
+                className="placeholder-texto percent"
                 placeholder="Digite o QE para calcular 20%"
                 value={vinteQe}
                 onChange={e => setVinteQe(e.target.value)}
                 name="vinteQe"
                 />
-                <Button onClick={calcular} id="botao-vinte-qe" className="btn">Calcular</Button>
+                <Button onClick={calcular} id="botao-vinte-qe" className="btn percent">Calcular</Button>
                 <br/><br/>
                 <span id="resultado-vinte-qe" className="result">
                     Resultado: {resultado}

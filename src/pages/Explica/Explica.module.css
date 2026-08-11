@@ -30,6 +30,9 @@
     font-style: italic;
     text-decoration: underline;
     word-break: break-all;
+    &:focus{
+        outline: 1px solid burlywood;
+    }
 }
 .linkss{
     word-break: break-word;
@@ -41,6 +44,6 @@
     text-decoration: underline dotted;
 }
 img{
-    max-width: 535px;
+    width: 535px;
     height: auto;
 }

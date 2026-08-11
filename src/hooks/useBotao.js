@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export function useBotao(callback){
     const [clicado, setClicado] = useState(false);
     const handleDown = e => {
@@ -9,10 +8,16 @@ export function useBotao(callback){
         }
         setClicado(true);
     }
-    const handleUp = () => {
+    const handleUp = (e) => {
         if (!clicado) return;
         setClicado(false);
+        if (e.currentTarget) e.currentTarget.blur();
         if (callback) callback();
+        if (e.type === "touchend") e.preventDefault();
+    }
+    const handleCancel = e => {
+        setClicado(false);
+        e.target.blur();
     }
     return {
         clicado,
@@ -21,6 +26,10 @@ export function useBotao(callback){
                 onMouseDown: handleDown,
                 onMouseUp: handleUp,
                 onTouchStart: handleDown,
-                onTouchEnd: handleUp, }
+                onTouchEnd: handleUp,
+                onBlur: handleCancel,
+                onContextMenu: e => e.preventDefault(),
+                onTouchCancel: handleCancel,
+                onMouseLeave: handleCancel, }
     }
 }
