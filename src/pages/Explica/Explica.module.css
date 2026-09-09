@@ -47,3 +47,11 @@ img{
     width: 535px;
     height: auto;
 }
+.link-brazil{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    & > * { text-decoration: none;
+      &:focus { outline: 1px solid burlywood; }
+    }
+}

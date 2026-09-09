@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { alterarHead } from "../../utils/favicon.js";
 import styles from './Explica.module.css';
+import { Link } from "react-router-dom";
 
 export default function Explica () {
     useEffect(() => {
@@ -67,6 +68,9 @@ export default function Explica () {
                     Nessa cidade, se houvesse mais uma rodada, PL ficaria em primeiro, mas não elegeria, porque não tem mais candidato com 20%, então passaria para REPUBLICANOS, que ainda tem candidato com 20%. Isso nos leva ao assunto dos "puxadores de votos".
                     <br /><br />
                     O que são os "puxadores de votos"? São candidatos que recebem muitos votos individualmente, isso favorece o QP do partido para eleger na primeira fase, que é a fase do QP e dos 10% do QE. Portanto, o "puxador" não puxa ninguém de forma direta, não se esqueça que os candidatos precisam ter pelo menos 10% na primeira fase e 20% na Sobra. Outra coisa, não há "puxada" nas Sobra, porque são rodadas independentes, porém, como o partido teve muitos votos, isso favorece, principalmente no primeiro cálculo da Sobra, já no segundo, fica difícil, porque aumenta 1 na divisão, mas nessa cidade, PL e REPUBLICANOS foram bem até no segundo cálculo. E para encerrar, todos esses partidos que elegeram nessa cidade são do centrão, mas isso é outro assunto, aproveite os cálculos, espero ter explicado bem.
+                </div>
+                <div className={`${styles.parte_dois} ${styles['link-brazil']}`}>
+                    <Link to={"/"}>Ir para a tela inicial</Link>
                 </div>
                 <div className={`${styles.parte_dois}`}>
                     <span>Adendos:</span>
