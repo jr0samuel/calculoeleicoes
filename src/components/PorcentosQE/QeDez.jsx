@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Button } from "../../hooks/useButton.jsx";
 import { calcularDezQe } from "./porcentagensQe.js";
+import { CalcContext } from "../../context/CalcContext.jsx";
 
 export function QeDez() {
-    const [dezQe, setDezQe] = useState("");
-    const [resultado, setResultado] = useState("");
+    const {
+        dezQe, setDezQe, resultadoDezQe, setResultadoDezQe
+    } = useContext(CalcContext);
 
     function calcular() {
         const calculado = calcularDezQe(dezQe);
-        setResultado(calculado);
+        setResultadoDezQe(calculado);
     };
 
     return(
@@ -26,7 +28,7 @@ export function QeDez() {
                 <Button onClick={calcular} id="botao-dez-qe" className="btn percent">Calcular</Button>
                 <br/><br/>
                 <span id="resultado-dez-qe" className="result">
-                    Resultado: {resultado}
+                    Resultado: {resultadoDezQe}
                 </span>
             </div>
             <br/><hr/><br/>

@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Button } from "../../hooks/useButton.jsx";
 import { calcularQP } from "./qp.js";
+import { CalcContext } from "../../context/CalcContext.jsx";
 
 export function Qp() {
-    const [vvpc, setVvpc] = useState("");
-    const [qe, setQe] = useState("");
-    const [resultado, setResultado] = useState("");
+    const {
+        vvpc, setVvpc, qe, setQe, resultadoQp, setResultadoQp
+    } = useContext(CalcContext);
 
     function calcular() {
         const calculado = calcularQP(vvpc, qe);
-        setResultado(calculado);
+        setResultadoQp(calculado);
     };
 
     return(
@@ -35,7 +36,7 @@ export function Qp() {
                 <Button onClick={calcular} id="botao-qp" className="btn">Calcular</Button>
                 <br/><br/>
                 <span id="resultado-qp" className="result">
-                    Resultado: {resultado}
+                    Resultado: {resultadoQp}
                 </span>
             </div>
             <br/><hr/><br/>

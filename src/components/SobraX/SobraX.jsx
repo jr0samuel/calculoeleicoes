@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { calcularSobraX } from "./sobraX.js";
 import { Button } from "../../hooks/useButton.jsx";
+import { CalcContext } from "../../context/CalcContext.jsx";
 
 export function SobraX() {
-    const [sxVvPc, setSxVvPc] = useState("");
-    const [sxQpPc, setSxQpPc] = useState("");
-    const [sxVsPc, setSxVsPc] = useState("");
-    const [resultado, setResultado] = useState("");
+    const {
+        sxVvPc, setSxVvPc, sxQpPc, setSxQpPc, sxVsPc, setSxVsPc, resultadoSx, setResultadoSx
+    } = useContext(CalcContext);
 
     function calcular(){
         const valor = calcularSobraX(sxVvPc, sxQpPc, sxVsPc);
-        setResultado(valor === "" ? "" : valor);
+        setResultadoSx(valor === "" ? "" : valor);
     };
 
     return(
@@ -43,7 +43,7 @@ export function SobraX() {
                 <Button onClick={calcular} id="botao-sx" className="btn">Calcular</Button>
                 <br/><br/>
                 <span id="resultado-sx" className="result">
-                    Resultado: {resultado}
+                    Resultado: {resultadoSx}
                 </span>
             </div>
             <br/>

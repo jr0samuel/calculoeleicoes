@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { calcularSobraInicial } from "./sobraInicial.js";
 import { Button } from "../../hooks/useButton.jsx";
+import { CalcContext } from "../../context/CalcContext.jsx";
 
 export function SobraInicial() {
-    const [siVvPc, setSiVvPc] = useState("");
-    const [siQpPc, setSiQpPc] = useState("");
-    const [resultado, setResultado] = useState("");
+    const {
+        siVvPc, setSiVvPc, siQpPc, setSiQpPc, resultadoSi, setResultadoSi
+    } = useContext(CalcContext);
 
     function calcular(){
         const valor = calcularSobraInicial(siVvPc, siQpPc);
-        setResultado(valor === "" ? "" : valor);
+        setResultadoSi(valor === "" ? "" : valor);
     };
 
     return(
@@ -35,7 +36,7 @@ export function SobraInicial() {
                 <Button onClick={calcular} id="botao-si" className="btn">Calcular</Button>
                 <br/><br/>
                 <span id="resultado-si" className="result">
-                    Resultado: {resultado}
+                    Resultado: {resultadoSi}
                 </span>
             </div>
             <br/><hr/><br/>
