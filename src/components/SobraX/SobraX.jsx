@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { calcularSobraX } from "./sobraX.js";
 import { Button } from "../../hooks/useButton.jsx";
 import { CalcContext } from "../../context/CalcContext.jsx";
+import { useEnterSubmit } from "../../hooks/useEnterSubmit.jsx";
 
 export function SobraX() {
     const {
         sxVvPc, setSxVvPc, sxQpPc, setSxQpPc, sxVsPc, setSxVsPc, resultadoSx, setResultadoSx
     } = useContext(CalcContext);
+    const btnRef = useRef(null);
+    const enterProps = useEnterSubmit(btnRef);
 
-    function calcular(){
+    function calcular7(){
         const valor = calcularSobraX(sxVvPc, sxQpPc, sxVsPc);
         setResultadoSx(valor === "" ? "" : valor);
     };
@@ -24,6 +27,7 @@ export function SobraX() {
                 value={sxVvPc}
                 onChange={e => setSxVvPc(e.target.value)}
                 name="sxVvPc"
+                {...enterProps}
                 />
                 <input id="sxqppc"
                 className="placeholder-texto"
@@ -31,6 +35,7 @@ export function SobraX() {
                 value={sxQpPc}
                 onChange={e => setSxQpPc(e.target.value)}
                 name="sxQpPc"
+                {...enterProps}
                 />
                 <input id="sxvspc"
                 className="placeholder-texto"
@@ -38,9 +43,15 @@ export function SobraX() {
                 value={sxVsPc}
                 onChange={e => setSxVsPc(e.target.value)}
                 name="sxVsPc"
+                {...enterProps}
                 />
                 <br/><br/>
-                <Button onClick={calcular} id="botao-sx" className="btn">Calcular</Button>
+                <Button onClick={calcular7}
+                        id="botao-sx" className="btn"
+                        ref={btnRef}
+                >
+                    Calcular
+                </Button>
                 <br/><br/>
                 <span id="resultado-sx" className="result">
                     Resultado: {resultadoSx}

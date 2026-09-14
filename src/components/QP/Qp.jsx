@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Button } from "../../hooks/useButton.jsx";
 import { calcularQP } from "./qp.js";
 import { CalcContext } from "../../context/CalcContext.jsx";
+import { useEnterSubmit } from "../../hooks/useEnterSubmit.jsx";
 
 export function Qp() {
     const {
         vvpc, setVvpc, qe, setQe, resultadoQp, setResultadoQp
     } = useContext(CalcContext);
+    const btnRef = useRef(null);
+    const enterProps = useEnterSubmit(btnRef);
 
-    function calcular() {
+    function calcular2() {
         const calculado = calcularQP(vvpc, qe);
         setResultadoQp(calculado);
     };
@@ -24,6 +27,7 @@ export function Qp() {
                 value={vvpc}
                 onChange={e => setVvpc(e.target.value)}
                 name="vvpc"
+                {...enterProps}
                 />
                 <input id="qe"
                 className="placeholder-texto"
@@ -31,9 +35,15 @@ export function Qp() {
                 value={qe}
                 onChange={e => setQe(e.target.value)}
                 name="qe"
+                {...enterProps}
                 />
                 <br/><br/>
-                <Button onClick={calcular} id="botao-qp" className="btn">Calcular</Button>
+                <Button onClick={calcular2}
+                        id="botao-qp" className="btn"
+                        ref={btnRef}
+                >
+                    Calcular
+                </Button>
                 <br/><br/>
                 <span id="resultado-qp" className="result">
                     Resultado: {resultadoQp}

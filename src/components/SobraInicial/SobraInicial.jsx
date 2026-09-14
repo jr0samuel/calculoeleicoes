@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { calcularSobraInicial } from "./sobraInicial.js";
 import { Button } from "../../hooks/useButton.jsx";
 import { CalcContext } from "../../context/CalcContext.jsx";
+import { useEnterSubmit } from "../../hooks/useEnterSubmit.jsx";
 
 export function SobraInicial() {
     const {
         siVvPc, setSiVvPc, siQpPc, setSiQpPc, resultadoSi, setResultadoSi
     } = useContext(CalcContext);
+    const btnRef = useRef(null);
+    const enterProps = useEnterSubmit(btnRef);
 
-    function calcular(){
+    function calcular5(){
         const valor = calcularSobraInicial(siVvPc, siQpPc);
         setResultadoSi(valor === "" ? "" : valor);
     };
@@ -24,6 +27,7 @@ export function SobraInicial() {
                 value={siVvPc}
                 onChange={e => setSiVvPc(e.target.value)}
                 name="siVvPc"
+                {...enterProps}
                 />
                 <input id="siqppc"
                 className="placeholder-texto"
@@ -31,9 +35,15 @@ export function SobraInicial() {
                 value={siQpPc}
                 onChange={e => setSiQpPc(e.target.value)}
                 name="siQpPc"
+                {...enterProps}
                 />
                 <br/><br/>
-                <Button onClick={calcular} id="botao-si" className="btn">Calcular</Button>
+                <Button onClick={calcular5}
+                        id="botao-si" className="btn"
+                        ref={btnRef}
+                >
+                    Calcular
+                </Button>
                 <br/><br/>
                 <span id="resultado-si" className="result">
                     Resultado: {resultadoSi}

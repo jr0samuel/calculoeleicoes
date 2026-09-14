@@ -1,5 +1,5 @@
-import { useState } from "react";
-export function useBotao(callback){
+import { useImperativeHandle, useState } from "react";
+export function useBotao(callback, ref){
     const [clicado, setClicado] = useState(false);
     const handleDown = e => {
         if (e.type === "keydown"){
@@ -19,6 +19,13 @@ export function useBotao(callback){
         setClicado(false);
         e.target.blur();
     }
+    const pressDown = () => setClicado(true);
+    const pressUp = () => {
+        if (!clicado) return;
+        setClicado(false);
+        if (callback) callback();
+    }
+    useImperativeHandle(ref, () => ({pressDown, pressUp}))
     return {
         clicado,
         bind: { onKeyDown: handleDown,

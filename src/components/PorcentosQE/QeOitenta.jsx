@@ -1,14 +1,17 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Button } from "../../hooks/useButton.jsx";
 import { calcularOitentaQe } from "./porcentagensQe.js";
 import { CalcContext } from "../../context/CalcContext.jsx";
+import { useEnterSubmit } from "../../hooks/useEnterSubmit.jsx";
 
 export function QeOitenta() {
     const {
         oitentaQe, setOitentaQe, resultadoOitentaQe, setResultadoOitentaQe
     } = useContext(CalcContext);
+    const btnRef = useRef(null);
+    const enterProps = useEnterSubmit(btnRef);
 
-    function calcular() {
+    function calcular4() {
         const calculado = calcularOitentaQe(oitentaQe);
         setResultadoOitentaQe(calculado);
     };
@@ -24,8 +27,14 @@ export function QeOitenta() {
                 value={oitentaQe}
                 onChange={e => setOitentaQe(e.target.value)}
                 name="oitentaQe"
+                {...enterProps}
                 />
-                <Button onClick={calcular} id="botao-oitenta-qe" className="btn percent">Calcular</Button>
+                <Button onClick={calcular4}
+                        id="botao-oitenta-qe" className="btn percent"
+                        ref={btnRef}
+                >
+                    Calcular
+                </Button>
                 <br/><br/>
                 <span id="resultado-oitenta-qe" className="result">
                     Resultado: {resultadoOitentaQe}
