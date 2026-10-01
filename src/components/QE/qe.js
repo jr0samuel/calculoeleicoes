@@ -1,9 +1,14 @@
 export function calcularQE(vve, vp) {
-    if (vve === "" || vp === "") return "";
+    if (vve === "" || isNaN(vve) || vp === "" || isNaN(vp) || Number(vp) == 0) return "";
     let conta = vve / vp;
-    if (!isFinite(conta) || isNaN(conta)) return "";
-    let parteInteira = Math.floor(conta);
-    let primeiroDecimal = Math.floor((conta * 10) + 1e-10) % 10;
-    let resolucao = (primeiroDecimal <= 5) ? parteInteira : (parteInteira + 1);
-    return resolucao;
+    let contaAbsoluta = Math.abs(conta);
+    let contaLimpa = contaAbsoluta.toFixed(14);
+    let [strInteiro, strDecimal] = contaLimpa.split(".");
+    let parteInteira = Number(strInteiro);
+    let primeiroDecimal = Number(strDecimal[0]);
+    if (primeiroDecimal <= 5) {
+        return parteInteira;
+    } else {
+        return parteInteira + 1;
+    }
 };
