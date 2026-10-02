@@ -19,6 +19,9 @@
     border: 1px solid rebeccapurple;
     padding: 30px 0PX;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
  .secao_tres_link{
     color: black;

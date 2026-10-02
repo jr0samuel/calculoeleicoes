@@ -30,9 +30,12 @@ export default function Home(){
                 <SobraX />
             </section>
             <section className={styles.secao_tres}>
-                <a className={styles.secao_tres_link} href="/explica" target="_blank" rel="noreferrer">
+                <span><a className={styles.secao_tres_link} href="/explica" target="_blank" rel="noreferrer">
                     Clique para ver a explicação dos cálculos
-                </a>
+                </a></span>
+                <span><a className={styles.secao_tres_link} href="/">
+                    Ir para a tela inicial
+                </a></span>
             </section>
         </main>
     );
