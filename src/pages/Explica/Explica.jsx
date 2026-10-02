@@ -19,7 +19,7 @@ export default function Explica () {
                 <div className={`${styles.parte_um}`}>
                     Vamos fazer um exemplo de eleição municipal com uma cidade real. Primeiro, precisa dos dados: votos, partidos/coligações, candidatos. Eu encontrei os dados em alguns sites de notícias e no TSE, mas precisei juntar e organizar tudo, porque nenhum site foi devidamente claro, porém a cidade é pequena, então não foi difícil, só foi chato.
                     <br/><br/>
-                    Nessa cidade, são 11 vagas. Houve só duas federações, sendo que numa delas, apenas um partido recebeu votos, e na outra, um partido recebeu a maioria e outro contribuiu com um único voto, mas nenhuma dessas federações conseguiu votos para eleger.
+                    Nessa cidade, são 11 vagas (poderia ser menos, inclusive poderia ser menos que 9, o mínimo para qualquer cidade, até para cidades menores que essa, mas isso é outro assunto). Houve só duas federações, sendo que numa delas, apenas um partido recebeu votos, e na outra, um partido recebeu a maioria e outro contribuiu com um único voto, mas nenhuma dessas federações conseguiu votos para eleger.
                     <br/><br/>
                     Vamos aos cálculos. Primeiro, o quociente eleitoral (QE). Nessa cidade, foi 1764, que é a quantidade mínima de votos que os partidos precisam para eleger nessa primeira parte. Apenas 6 partidos (todos sem federação) conseguiram.
                     <br /><br />
