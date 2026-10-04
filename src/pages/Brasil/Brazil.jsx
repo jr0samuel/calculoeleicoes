@@ -17,11 +17,9 @@ export default function Brazil() {
     return (
         <main className="bandeira" role="img" aria-label="Bandeira do Brasil em tela cheia">
             <div className="clique">clique no centro do círculo da bandeira para ir até a página de cálculo da eleição <br/> se não aparecer a bandeira, clique no centro da tela</div>
-            <div className="brazil-flags">
               <Link to="/calculo">
                 <div className="brazil-flag"> </div>
               </Link>
-            </div>
         </main>
     );
 };

@@ -1,4 +1,5 @@
 .bandeira {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background: url(/bandeira-um.png) no-repeat center center fixed;
