@@ -19,7 +19,7 @@ export function Qp() {
     return(
         <>
             <div className="container">
-                <h3>Agora calcule o Quociente Partidário (QP) de cada partido/federação</h3>
+                <h3>Agora calcule o Quociente Partidário (QP) de cada partido/federação. Se todos os partidos/federações tiverem QP 0, os candidatos mais votados serão eleitos, igual prefeito, governador, presidente e senador</h3>
                 <br/>
                 <input id="vv-pc"
                 className="placeholder-texto"
@@ -49,7 +49,7 @@ export function Qp() {
                     Resultado: {resultadoQp}
                 </span>
             </div>
-            <br/><hr/><br/>
+            <br/><br/><hr/><br/>
         </>
     );
 };

@@ -19,7 +19,7 @@ export function SobraX() {
     return(
         <>
             <div className="container">
-                <h3>O cálculo abaixo vale somente para os partidos/federações que ganharam alguma vaga na sobra, para isso, digite também a quantidade de vagas obtidas nas rodadas</h3>
+                <h3>Detalhe: não precisa fazer o cálculo anterior de novo, guarde o resultado dos partidos/federações que não elegeram na Sobra e apenas faça o cálculo abaixo para os que ganharam alguma vaga, de acordo com o número de vagas obtidas nas Sobras</h3>
                 <br/>
                 <input id="sxvvpc"
                 className="placeholder-texto"
@@ -39,7 +39,7 @@ export function SobraX() {
                 />
                 <input id="sxvspc"
                 className="placeholder-texto"
-                placeholder="Vagas obtidas nas sobras"
+                placeholder="Vagas obtidas nas Sobras"
                 value={sxVsPc}
                 onChange={e => setSxVsPc(e.target.value)}
                 name="sxVsPc"

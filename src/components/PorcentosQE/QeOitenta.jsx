@@ -19,7 +19,7 @@ export function QeOitenta() {
     return(
         <>
             <div className="container">
-                <h3>O partido/federação só pode participar da Sobra se tiver recebido votos pelo menos igual a 80% do QE, ainda que tenha tido QP 0</h3>
+                <h3>O partido/federação só pode participar da Sobra se tiver recebido votos pelo menos igual a 80% do QE, ainda que tenha tido QP 0, e também se tiver algum candidato com pelo menos 20% do QE, veja 20% na seção abaixo</h3>
                 <br/>
                 <input id="oitenta-qe"
                 className="placeholder-texto percent"
@@ -40,7 +40,7 @@ export function QeOitenta() {
                     Resultado: {resultadoOitentaQe}
                 </span>
             </div>
-            <br/><hr/><br/>
+            <br/><br/><hr/><br/>
         </>
     );
 };

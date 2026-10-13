@@ -1,19 +1,32 @@
 import Decimal from "decimal.js";
+import { numberTrouble } from "../../utils/troubleshooting.js";
 export function calcularDezQe(dezQe) {
-    if (dezQe === "" || isNaN(dezQe) || !isFinite(Number(dezQe))) return "";
-    const conta = new Decimal(dezQe).times(0.1).abs();
+    let dezQeNT = numberTrouble(dezQe);
+    if (dezQeNT === null || !isFinite(dezQeNT)) return "";
+    const conta = new Decimal(dezQeNT).times(0.1).abs();
     if (!conta.isFinite() || conta.isNaN()) return "";
-    return conta.floor().toNumber();
+    return new Intl.NumberFormat("pt-BR", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(conta.floor().toNumber());
 };
 export function calcularOitentaQe(oitentaQe) {
-    if (oitentaQe === "" || isNaN(oitentaQe) || !isFinite(Number(oitentaQe))) return "";
-    const conta = new Decimal(oitentaQe).times(0.8).abs();
+    let oitentaQeNT = numberTrouble(oitentaQe);
+    if (oitentaQeNT === null || !isFinite(oitentaQeNT)) return "";
+    const conta = new Decimal(oitentaQeNT).times(0.8).abs();
     if (!conta.isFinite() || conta.isNaN()) return "";
-    return conta.floor().toNumber();
+    return new Intl.NumberFormat("pt-BR", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(conta.floor().toNumber());
 };
 export function calcularVinteQe(vinteQe) {
-    if (vinteQe === "" || isNaN(vinteQe) || !isFinite(Number(vinteQe))) return "";
-    const conta = new Decimal(vinteQe).times(0.2).abs();
+    let vinteQeNT = numberTrouble(vinteQe);
+    if (vinteQeNT === null || !isFinite(vinteQeNT)) return "";
+    const conta = new Decimal(vinteQeNT).times(0.2).abs();
     if (!conta.isFinite() || conta.isNaN()) return "";
-    return conta.floor().toNumber();
+    return new Intl.NumberFormat("pt-BR", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(conta.floor().toNumber());
 };

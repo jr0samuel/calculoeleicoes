@@ -19,7 +19,7 @@ export function QeVinte() {
     return(
         <>
             <div className="container">
-                <h3>Confira qual partido/federação venceu a rodada e veja se tem algum candidato que recebeu votos pelo menos igual a 20% do QE, se nenhum recebeu, veja se o partido/federação que ficou em segundo na rodada tem candidato com 20% do QE, e assim sucessivamente, mas se ninguém tiver 20%, elege um candidato do partido/federação que ganhou a rodada</h3>
+                <h3>Detalhe: se chegar na Sobra e nenhum partido/federação tiver pelo menos um candidato sobrando com 20% QE, será eleito o candidato mais votado que sobra do partido/federação que ganhou a rodada</h3>
                 <br/>
                 <input id="vinte-qe"
                 className="placeholder-texto percent"
@@ -40,7 +40,7 @@ export function QeVinte() {
                     Resultado: {resultadoVinteQe}
                 </span>
             </div>
-            <br/><hr/><br/>
+            <br/><br/><hr/><br/>
         </>
     );
 };

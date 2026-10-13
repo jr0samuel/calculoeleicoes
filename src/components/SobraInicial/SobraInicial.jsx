@@ -49,7 +49,7 @@ export function SobraInicial() {
                     Resultado: {resultadoSi}
                 </span>
             </div>
-            <br/><hr/><br/>
+            <br/><br/><hr/><br/>
         </>
     );
 };

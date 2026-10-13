@@ -23,10 +23,10 @@ export default function Home(){
                 <Qe />
                 <Qp />
                 <QeDez />
-                <h3>Após os cálculos anteriores, começam as rodadas do Cálculo da Sobra</h3><br/><hr/><br/>
+                <h3>Agora as Rodadas da Sobra</h3><br/><hr/><br/>
                 <QeOitenta />
-                <SobraInicial />
                 <QeVinte />
+                <SobraInicial />
                 <SobraX />
             </section>
             <section className={styles.secao_tres}>

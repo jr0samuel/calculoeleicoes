@@ -49,7 +49,7 @@ export function Qe() {
                     Resultado: {resultadoQe}
                 </span>
             </div>
-            <br/><hr/><br/>
+            <br/><br/><hr/><br/>
         </>
     );
 };

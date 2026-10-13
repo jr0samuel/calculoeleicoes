@@ -1,15 +1,22 @@
 import Decimal from "decimal.js";
+import { numberTrouble } from "../../utils/troubleshooting.js";
 export function calcularQE(vve, vp) {
-    if (vve === "" || isNaN(vve) || !isFinite(Number(vve)) || vp === "" || isNaN(vp) || !isFinite(Number(vp)) || Number(vp) == 0) return "";
-    const valor1 = new Decimal(vve);
-    const valor2 = new Decimal(vp);
+    let vveNT = numberTrouble(vve);
+    let vpNT = numberTrouble(vp);
+    if (vveNT === null || !isFinite(vveNT) || vpNT === null || !isFinite(vpNT) || Number(vpNT) === 0) return "";
+    const valor1 = new Decimal(vveNT);
+    const valor2 = new Decimal(vpNT);
     const conta = valor1.dividedBy(valor2).abs();
     if (!conta.isFinite() || conta.isNaN()) return "";
     const parteInteira = conta.trunc().toNumber();
     const primeiroDecimal = conta.times(10).mod(10).trunc().toNumber();
     if (primeiroDecimal <= 5) {
-        return parteInteira;
+        return new Intl.NumberFormat("pt-BR", {
+            maximumFractionDigits: 0
+        }).format(parteInteira);
     } else {
-        return parteInteira + 1;
+        return new Intl.NumberFormat("pt-BR", {
+            maximumFractionDigits: 0
+        }).format(parteInteira + 1);
     }
 };
